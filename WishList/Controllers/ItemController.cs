@@ -14,8 +14,10 @@ namespace WishList.Controllers
             return View();
         }
 
+        private ApplicationDbContext Context { get; set; }
+
         public ItemController(ApplicationDbContext applicationDbContext) {
-            _context = applicationDbContext;
+            Context = applicationDbContext;
         }
     }
 }
