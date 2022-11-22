@@ -9,17 +9,13 @@ namespace WishList.Controllers
 {
     public class ItemController : Controller
     {
-        
-
-        private readonly ApplicationDbContext _context { get; set; }
+        public IActionResult Index()
+        {
+            return View();
+        }
 
         public ItemController(ApplicationDbContext applicationDbContext) {
             _context = applicationDbContext;
-        }
-
-        public IActionResult Index()
-        {
-            return View(List<_context.Items>);
         }
     }
 }
