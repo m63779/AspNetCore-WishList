@@ -8,7 +8,6 @@ namespace WishList.Data
 {
     public class ApplicationDbContext : Microsoft.EntityFrameworkCore.DbContext
     {
-        public DbSet<Item> Items { get; set; }
         public ApplicationDbContext( Microsoft.EntityFrameworkCore.DbContextOptions options) : base(options)
         { }
     }
